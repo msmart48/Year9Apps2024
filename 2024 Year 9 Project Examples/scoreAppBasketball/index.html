@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="mystyle.css">
+        <title>My First Web Page</title>
+    </head>
+    <body>
+        <!-- example of buttons for score -->
+        <h1>Score App</h1>
+        <h1 id="teamAScoreOutput">0</h1>
+        <button onclick="addPoint('a')">A + 1</button>
+        <h1 id="teamBScoreOutput">0</h1>
+        <button onclick="addPoint('b')">A + 1</button>
+        <!-- score sheets -->
+        <h2>Team 1</h2>
+        <table border="1" id="teamATable">
+            <tr><th>Number</th><th>Name</th><th>Foul</th><th>Foul
+                    Control</th><th>Notifications</th></tr>
+        </table>
+
+        <h2>Team 2</h2>
+        <table border="1" id="teamBTable">
+            <tr><th>Number</th><th>Name</th><th>Foul</th><th>Notifications</th></tr>
+        </table>
+
+        <!-- Script File -->
+        <script src="script.js"></script>
+
+    </body>
+
+</html>
