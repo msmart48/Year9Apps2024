@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>Budget App Template</title>
+    </head>
+    <body>
+        <!-- Start body content -->
+        <div class="container">
+            <h1 class="title">Personal Expense Tracker</h1>
+            <!-- area for inputting costs and expenses -->
+            <div class="flex-container">
+                <!-- col 1 -->
+                <!-- Input area -->
+                <div style="flex-grow: 2" id="inputArea">
+                    <h2>Enter Expense </h2>
+                    Date: <input id="dateInput" type="date"><br>
+                    Description: <input id="descriptionInput" type="text"><br>
+                    Category: <select id="categoryInput">
+                        <option value="Entertainment">Entertainment</option>
+                        <option value="Food">Food</option>
+                        <option value="Fuel">Fuel</option>
+                        <option value="Shopping">Shopping</option>
+                    </select><br>
+                    Amount: <input id="amountInput" type="Number"><br>
+                    <button onclick="addItem()">Add</button>
+                </div>
+                <!-- col 2 -->
+                <!-- expense summary area -->
+                <div style="flex-grow: 3">
+                    <h2>Expense Summary:</h2>
+                    <h2 id="totalSpentOutput">Total Spent: $0.00</h2>
+                    <h2 id="categoryOutput"></h2>
+                </div>
+            </div>
+            <h2>Expense List:</h2>
+            <button onclick="sort('category')">Sort By Category</button>
+            <button onclick="sort('amount')">Sort By Amount</button>
+            <!-- list area table -->
+            <table id="listTable">
+                <tr><th>Date</th><th>Description</th><th>Category</th><th>Amount</th><th>Control</th></tr>
+            </table>
+        </div>
+        <!-- Script File -->
+        <script src="script.js"></script>
+
+    </body>
+
+</html>
