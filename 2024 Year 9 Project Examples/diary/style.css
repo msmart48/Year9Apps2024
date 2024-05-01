@@ -1,6 +1,13 @@
 .box{
-    background-color:grey;
-    border:1px black solid;
+        border:1px black solid;
     border-radius:3px;
-
+}
+.EC{
+background-color:grey;
+}
+.Personal{
+background-color:lightblue;
+}
+.School{
+background-color:lightgreen;
 }
