@@ -5,6 +5,9 @@ const taskOutput = document.getElementById("taskOutput");
 
 var tasks = [];
 
+//load any previous tasks
+loadDiary();
+
 //get job details and add to jobs array
 function addTask() {
     var task = jobNameInput.value;
@@ -52,6 +55,9 @@ function findTasks(type) {
 
     //send list the to display list function
     showTasks(list);
+
+    //save tasks
+    saveDiary();
 }
 
 //send a date to format into common format for reading
@@ -76,4 +82,16 @@ function completeTask(e) {
         task.completed = true;
     }
     e.parentNode.style.display = 'none';    //hide the element on view
+    saveDiary();
+}
+
+function loadDiary() {
+    if (localStorage.getItem('tasks')) {
+        tasks = JSON.parse(localStorage.getItem("tasks"));
+    }
+    findTasks('all');
+}
+
+function saveDiary() {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
 }
